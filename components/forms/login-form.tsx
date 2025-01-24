@@ -1,6 +1,7 @@
 'use client'
 
 import { ComponentPropsWithoutRef, FormEvent, useState } from 'react'
+import Link from 'next/link'
 import { Loader } from 'lucide-react'
 import { signIn } from 'next-auth/react'
 
@@ -82,13 +83,19 @@ export function LoginForm({
       </Card>
       <div className="text-balance text-center text-xs text-muted-foreground">
         By clicking continue, you agree to our{' '}
-        <a href="#" className="underline underline-offset-4 hover:text-primary">
+        <Link
+          href="/tos"
+          className="underline underline-offset-4 hover:text-primary"
+        >
           Terms of Service
-        </a>{' '}
+        </Link>{' '}
         and{' '}
-        <a href="#" className="underline underline-offset-4 hover:text-primary">
+        <Link
+          href="/privacy"
+          className="underline underline-offset-4 hover:text-primary"
+        >
           Privacy Policy
-        </a>
+        </Link>
         .
       </div>
     </div>
